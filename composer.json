@@ -1,0 +1,33 @@
+{
+  "name": "jakubtobiasz/sylius-skeleton",
+  "type": "project",
+  "license": "MIT",
+  "description": "Sylius skeleton POC",
+  "require": {
+    "php": ">=8.0",
+    "symfony/flex": "^2"
+  },
+  "flex-require": {
+    "sylius/core-bundle": "^1.12"
+  },
+  "config": {
+    "allow-plugins": {
+      "symfony/flex": true
+    }
+  },
+  "autoload": {
+    "psr-4": {
+      "App\\": "src/"
+    }
+  },
+  "extra": {
+    "symfony": {
+      "allow-contrib": false,
+      "require": "5.4.*",
+      "endpoint": [
+        "https://api.github.com/repos/jakubtobiasz/SyliusRecipes/contents/index.json?ref=flex/main",
+        "flex://defaults"
+      ]
+    }
+  }
+}
